@@ -1,7 +1,7 @@
 // custom import
 import { fetchImages } from './js/pixabay-api';
 import { renderImages } from './js/render-functions';
-import errorSvg from './img/errorSvg.svg';
+import errorSvg from '../img/errorSvg.svg';
 // SimpleLightBox library
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
