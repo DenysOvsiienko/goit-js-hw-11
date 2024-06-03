@@ -2,6 +2,7 @@
 import { fetchImages } from './js/pixabay-api';
 import { renderImages } from './js/render-functions';
 import errorSvg from './img/errorSvg.svg';
+import cautionSvg from './img/cautionSvg.svg';
 // SimpleLightBox library
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
@@ -43,7 +44,11 @@ searchBtnElem.addEventListener('click', event => {
       standBySpanElem.classList.add('visually-hidden');
     })
     .catch(error => {
-      console.log(error);
+      iziToast.warning({
+        iconUrl: cautionSvg,
+        position: 'topRight',
+        message: `${error}`,
+      });
     });
   searchFormElem.reset();
 });
