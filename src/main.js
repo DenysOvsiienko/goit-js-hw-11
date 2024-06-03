@@ -1,6 +1,7 @@
 // custom import
 import { fetchImages } from './js/pixabay-api';
 import { renderImages } from './js/render-functions';
+import errorSvg from './img/errorSvg.svg';
 // SimpleLightBox library
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
@@ -31,6 +32,7 @@ searchBtnElem.addEventListener('click', event => {
     .then(data => {
       if (!data.total) {
         iziToast.error({
+          iconUrl: errorSvg,
           position: 'topRight',
           message:
             'Sorry, there are no images matching your search query. Please try again!',
