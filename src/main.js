@@ -12,7 +12,6 @@ import 'izitoast/dist/css/iziToast.min.css';
 
 const searchFormElem = document.querySelector('.search-form');
 const searchInputElem = document.querySelector('.search-input');
-const searchBtnElem = document.querySelector('.search-btn');
 const standBySpanElem = document.querySelector('.loader');
 const galleryElem = document.querySelector('.gallery');
 let gallery = new SimpleLightbox('.gallery a', {
@@ -21,7 +20,7 @@ let gallery = new SimpleLightbox('.gallery a', {
   captionDelay: 250,
 });
 
-searchBtnElem.addEventListener('click', event => {
+searchFormElem.addEventListener('submit', event => {
   event.preventDefault();
   if (!searchInputElem.value.trim()) {
     searchFormElem.reset();
