@@ -43,6 +43,7 @@ searchFormElem.addEventListener('submit', event => {
       standBySpanElem.classList.add('visually-hidden');
     })
     .catch(error => {
+      standBySpanElem.classList.add('visually-hidden');
       iziToast.warning({
         iconUrl: cautionSvg,
         position: 'topRight',

@@ -6,7 +6,7 @@ export const fetchImages = requestInput => {
     orientation: 'horizontal',
     safesearch: true,
   });
-  return fetch(`https://pixabay.com/api/?${searchParams}`).then(response => {
+  return fetch(`https://!pixabay.com/api/?${searchParams}`).then(response => {
     if (!response.ok) {
       throw new Error(response.status);
     }
